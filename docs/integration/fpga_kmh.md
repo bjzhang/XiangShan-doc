@@ -19,11 +19,20 @@
 git clone https://github.com/OpenXiangShan/XiangShan
 cd XiangShan
 export NOOP_HOME=$(pwd)
-git checkout 4951141ce593f31024884bb9e150e5519f8cf913
+# For sim or ASIC
+# git checkout origin/kunminghu
+# for FPGA
+git checkout origin/kunminghu-fpga
 make init
 make clean
+# For sim
+# make sim-verilog RELEASE=1 MFC=1 NO_DIFF=1
+# For FPGA or ASIC
 make verilog RELEASE=1 MFC=1 NO_DIFF=1
+# MFC=1 chisel 6
 cd build
+# sim top：top.SimTop.v
+# FPGA or ASIC top：XSTop.v
 mv XSTop.v XSTop.sv
 ```
 
