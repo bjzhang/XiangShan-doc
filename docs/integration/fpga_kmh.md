@@ -35,6 +35,9 @@ cd build
 # FPGA or ASIC top：XSTop.v
 mv XSTop.v XSTop.sv
 ```
+- XSCore: cpu core wo L2
+- XSTile: cpu core w L2
+- XSTop:  cpu core w L2 w L3
 
 ### 拷贝 Vivado 相关脚本，生成 Vivado 项目，编译二进制流
 
